@@ -12,12 +12,13 @@
 
 ### About Me
 
-Senior AI Engineer with 6+ years of experience building production-grade **Generative AI**, **Multi-Agent Systems**, **MLOps pipelines**, and **enterprise-scale AI architectures**. Passionate about solving real-world problems through intelligent systems.
+Senior AI Engineer & Architect with **7+ years** of experience building production-grade **Generative AI**, **Multi-Agent Systems**, **MLOps pipelines**, and **enterprise-scale AI architectures**. Passionate about pushing the boundaries of what's possible with intelligent systems.
 
-- Currently building **Multi-Agent GenAI Operations Platforms** at Norconsult Telematics
+- Currently architecting **Multi-Agent GenAI Operations Platforms** at Norconsult Telematics
 - Expert in **RAG systems**, **LLM orchestration**, and **agentic workflows**
 - M.Sc. in Computing & Artificial Intelligence from Fayoum University
-- Published researcher in Deep Learning and Video Captioning
+- Published researcher in Deep Learning & Video Captioning (Elsevier)
+- Award-winning engineer: **1st Place** graduation projects & pre-master class
 
 ---
 
@@ -69,7 +70,7 @@ Senior AI Engineer with 6+ years of experience building production-grade **Gener
 
 | | |
 |---|---|
-| **6+** Years of AI Experience | **20+** Production AI Projects |
+| **7+** Years of AI Experience | **20+** Production AI Projects |
 | **1st Place** - Graduation Projects, Fayoum University | **3rd Place** - IEEE-ICPC Competition |
 | **Published** - Video Captioning using Deep Learning | **M.Sc.** - Computing & AI |
 
