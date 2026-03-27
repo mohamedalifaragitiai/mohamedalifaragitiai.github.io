@@ -121,7 +121,8 @@ $(document).ready(function () {
         'Multi-Agent Systems Expert',
         'MLOps Engineer',
         'RAG & LLM Specialist',
-        'Full-Stack AI Developer'
+        'Full-Stack AI Developer',
+        'AI/GenAI & Data Science Lecturer'
     ];
     var roleIndex = 0;
     var charIndex = 0;
