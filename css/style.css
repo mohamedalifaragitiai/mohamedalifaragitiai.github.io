@@ -1099,14 +1099,14 @@ section:nth-child(even) {
 
 /* ===== SKILLS ===== */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 22px;
-    align-items: start;
+    columns: 4 300px;
+    column-gap: 22px;
 }
 
 .skill-category {
     padding: 28px;
+    margin-bottom: 22px;
+    break-inside: avoid;
     opacity: 0;
     transform: translateY(25px);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
