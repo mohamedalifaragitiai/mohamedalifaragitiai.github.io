@@ -222,12 +222,42 @@
                     </div>
                 </div>
                 <ul>
-                    <li>&#9733; <strong>AI-Powered Truck Safety Inspection System</strong> &mdash; Designed and developed an end-to-end AI inspection platform for truck checkpoint gates, automating driver identity verification via InsightFace (SCRFD + ArcFace) at <strong>96.7% accuracy in 56ms</strong>, bilingual license OCR (Arabic/English) using PaddleOCR, and license-to-face cross-verification using ArcFace 512-d embeddings. Benchmarked 6 face detection and 4 OCR models with interactive Plotly.js reports. Privacy-first architecture storing only non-reversible embeddings, with full Docker deployment and production-ready web UI.</li>
-                    <li>&#9733; <strong>Multi-Agent GenAI Operations Platform</strong> &mdash; Architected a centralized platform integrating 4 AI modules using microservices &ldquo;Sidecar Gateway&rdquo; pattern with Nginx, FastAPI, Streamlit, and Docker.</li>
-                    <li>&#9733; <strong>Autonomous Agentic Chatbot</strong> &mdash; Engineered a RAG-powered chatbot using GPT-4, LangChain, and ChromaDB/Pinecone, reducing manual query time by <strong>40%</strong>.</li>
-                    <li>&#9733; <strong>Intelligent Anomaly Detection System</strong> &mdash; Built real-time fraud detection using Isolation Forests + statistical heuristics for pattern detection across supply chain waybills.</li>
-                    <li>&#9733; <strong>Predictive Logistics Delay Engine</strong> &mdash; Developed XGBoost/LightGBM models for delivery delay forecasting with engineered features and actionable scheduling recommendations.</li>
-                    <li>&#9733; <strong>Enterprise OCR Pipeline</strong> &mdash; Implemented multi-stage PaddleOCR with LLM post-processing and Human-in-the-Loop validation, reducing document processing time by <strong>60%</strong>.</li>
+                    <li><strong>AI-Powered Truck Safety Inspection System</strong><br>
+                        <strong>S:</strong> Truck checkpoint gates required manual driver verification, creating bottlenecks and security gaps at scale.<br>
+                        <strong>T:</strong> Build an automated AI inspection platform handling identity verification, license validation, and safety compliance.<br>
+                        <strong>A:</strong> Developed a face verification pipeline using InsightFace (SCRFD + ArcFace), bilingual license OCR (Arabic/English) with PaddleOCR, and license-to-face cross-verification via ArcFace 512-d embeddings. Benchmarked 6 face detection and 4 OCR models. Designed a privacy-first architecture storing only non-reversible embeddings, with concurrent async pipeline (FastAPI + asyncio), interactive Plotly.js benchmark reports, and a production-ready web UI with live camera capture.<br>
+                        <strong>R:</strong> Achieved <strong>96.7% detection accuracy at 56ms/image</strong> on CPU, full inspection in under <strong>350ms</strong>, with complete Docker deployment and reusable benchmark tooling.</li>
+
+                    <li><strong>Multi-Agent GenAI Operations Platform</strong><br>
+                        <strong>S:</strong> Logistics operations relied on siloed tools with no unified AI capability across departments.<br>
+                        <strong>T:</strong> Architect a centralized GenAI platform consolidating multiple AI modules into a single production system.<br>
+                        <strong>A:</strong> Designed and built a microservices &ldquo;Sidecar Gateway&rdquo; architecture integrating 4 AI modules with Nginx, FastAPI, Streamlit, and Docker. Implemented Chain-of-Thought prompting for complex logistics queries.<br>
+                        <strong>R:</strong> Delivered a unified AI operations hub serving multiple teams, replacing fragmented workflows with a single platform.</li>
+
+                    <li><strong>Autonomous Agentic Chatbot</strong><br>
+                        <strong>S:</strong> Logistics teams spent significant time manually querying internal knowledge bases for operational data.<br>
+                        <strong>T:</strong> Build an intelligent RAG-powered chatbot to automate query resolution.<br>
+                        <strong>A:</strong> Engineered a chatbot using GPT-4, LangChain, and ChromaDB/Pinecone with agentic retrieval-augmented generation.<br>
+                        <strong>R:</strong> Reduced manual query time by <strong>40%</strong>, enabling faster decision-making across operations.</li>
+
+                    <li><strong>Intelligent Anomaly Detection System</strong><br>
+                        <strong>S:</strong> Fraud patterns in supply chain waybills were going undetected with rule-based approaches.<br>
+                        <strong>T:</strong> Develop a real-time anomaly detection system capable of identifying complex fraud patterns.<br>
+                        <strong>A:</strong> Built an ensemble system combining Isolation Forests with statistical heuristics, backed by a React/Vite frontend and interactive Plotly dashboards.<br>
+                        <strong>R:</strong> Enabled real-time fraud detection across supply chain operations with interactive analytics for investigation.</li>
+
+                    <li><strong>Predictive Logistics Delay Engine</strong><br>
+                        <strong>S:</strong> Delivery delays were unpredictable, causing scheduling inefficiencies and customer dissatisfaction.<br>
+                        <strong>T:</strong> Build a predictive model to forecast delays and provide actionable scheduling recommendations.<br>
+                        <strong>A:</strong> Developed XGBoost/LightGBM models with engineered features and a Streamlit dashboard for recommendations.<br>
+                        <strong>R:</strong> Enabled proactive delay management, improving delivery scheduling accuracy and operational planning.</li>
+
+                    <li><strong>Enterprise OCR Pipeline</strong><br>
+                        <strong>S:</strong> Manual document processing was a time-intensive bottleneck across enterprise workflows.<br>
+                        <strong>T:</strong> Automate document digitization with high accuracy and human oversight.<br>
+                        <strong>A:</strong> Implemented a multi-stage pipeline using PaddleOCR with GPT-4 post-processing and Human-in-the-Loop validation.<br>
+                        <strong>R:</strong> Reduced document processing time by <strong>60%</strong> while maintaining quality through human review.</li>
+
                     <li>Established secure production infrastructure with zero-trust tunneling, systemd orchestration, and RBAC enforcement.</li>
                     <li>Designed full-stack solutions combining React (Vite), FastAPI, and interactive Plotly dashboards for real-time logistics analytics.</li>
                 </ul>
@@ -249,10 +279,29 @@
                     </div>
                 </div>
                 <ul>
-                    <li>&#9733; <strong>AI Voice-First Interview Platform</strong> &mdash; Designed and built a production-grade platform automating candidate screening through real-time AI-conducted voice interviews. LangGraph-based conversational agent with Faster Whisper STT, Coqui XTTS v2 TTS, multi-LLM scoring (GPT-4o + Ollama), computer vision behavioral analysis (MediaPipe, InsightFace), React/TypeScript frontend with avatar lip-sync, scheduling, Odoo ERP integration, PDF reporting, and 50+ APIs.</li>
-                    <li>&#9733; <strong>WeBook Brain</strong> &mdash; Architected an integrated AI system combining a Gemini 2-powered chatbot, Fraud Detection RAG, and intelligent recommendation engine.</li>
-                    <li>&#9733; <strong>Fraud Detection Backend</strong> &mdash; Engineered a scalable FastAPI backend using Ollama 3, Mistral, ChromaDB, and MongoDB with production Docker deployment.</li>
-                    <li>&#9733; <strong>Churn Prediction Model</strong> &mdash; Developed a robust predictive model using advanced ML algorithms and feature engineering to identify at-risk customers.</li>
+                    <li><strong>AI Voice-First Interview Platform</strong><br>
+                        <strong>S:</strong> Manual candidate screening was slow, inconsistent, and unscalable for high-volume hiring.<br>
+                        <strong>T:</strong> Design and build a fully automated voice-first AI interview platform replacing traditional manual interviews.<br>
+                        <strong>A:</strong> Architected a multi-service async backend (FastAPI, PostgreSQL, Redis, MongoDB, MinIO) with a LangGraph-based stateful conversation engine (greeting &rarr; question &rarr; evaluate &rarr; follow-up &rarr; scoring &rarr; end). Built a real-time audio pipeline: Faster Whisper STT &rarr; LLM transcript correction &rarr; AI response &rarr; Coqui XTTS v2 TTS with avatar lip-sync. Integrated multi-LLM scoring (GPT-4o + Ollama), computer vision behavioral analysis (MediaPipe, InsightFace), and audio tonality scoring (LibROSA). Developed a React 18/TypeScript frontend with admin dashboard, real-time interview UI, and PDF report generation.<br>
+                        <strong>R:</strong> Delivered a production-grade platform with <strong>50+ APIs</strong>, <strong>13+ database models</strong>, <strong>127+ unit tests</strong>, sub-3-second interview completion UX, and full Odoo ERP integration for HR workflow automation.</li>
+
+                    <li><strong>WeBook Brain</strong><br>
+                        <strong>S:</strong> Customer support and fraud analysis were handled by separate disconnected systems with no AI augmentation.<br>
+                        <strong>T:</strong> Build an integrated AI system unifying chatbot, fraud detection, and recommendations.<br>
+                        <strong>A:</strong> Architected WeBook Brain combining a Gemini 2-powered chatbot, Fraud Detection RAG, and an intelligent recommendation engine into a single platform.<br>
+                        <strong>R:</strong> Delivered a unified AI brain powering customer-facing support, internal fraud investigation, and personalized recommendations.</li>
+
+                    <li><strong>Fraud Detection Backend</strong><br>
+                        <strong>S:</strong> Fraud analysis required manual review of transactions with no automated pattern detection.<br>
+                        <strong>T:</strong> Engineer a scalable, RAG-powered fraud detection backend.<br>
+                        <strong>A:</strong> Built a FastAPI backend using Ollama 3, Mistral, ChromaDB, and MongoDB with Docker deployment for production scalability.<br>
+                        <strong>R:</strong> Enabled automated fraud pattern detection with semantic search across historical transaction data.</li>
+
+                    <li><strong>Churn Prediction Model</strong><br>
+                        <strong>S:</strong> Customer attrition was not being identified early enough for retention interventions.<br>
+                        <strong>T:</strong> Develop a predictive model to identify at-risk customers before they churn.<br>
+                        <strong>A:</strong> Built a robust ML model using advanced algorithms and feature engineering on customer behavioral data.<br>
+                        <strong>R:</strong> Enabled proactive retention strategies by identifying churn-risk customers with actionable lead time.</li>
                 </ul>
                 <div class="tech-used">
                     <span>LangGraph</span><span>GPT-4o</span><span>Whisper</span><span>XTTS v2</span><span>MediaPipe</span><span>Gemini 2</span><span>Mistral</span><span>ChromaDB</span><span>MongoDB</span><span>Docker</span>

@@ -930,12 +930,12 @@ section:nth-child(even) {
 }
 
 .timeline-content ul li {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     padding-left: 18px;
     position: relative;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .timeline-content ul li::before {
@@ -947,6 +947,10 @@ section:nth-child(even) {
     height: 5px;
     border-radius: 50%;
     background: var(--accent);
+}
+
+.timeline-content ul li br {
+    margin-bottom: 2px;
 }
 
 .tech-used {
