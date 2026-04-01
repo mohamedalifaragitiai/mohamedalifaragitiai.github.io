@@ -41,6 +41,7 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
     background: var(--bg-dark);
     color: var(--text);
     line-height: 1.7;
