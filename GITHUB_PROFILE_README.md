@@ -1,92 +1,157 @@
-<h1 align="center">Hi there, I'm Mohamed Ali <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/></h1>
+<div align="center">
 
-<h3 align="center">Senior AI (GenAI) Engineer & Architect | Riyadh, Saudi Arabia</h3>
+# Mohamed Ali
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/mohamed-ali-b37953123/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="mailto:mohamedalifarag.ml@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://mohamedalifaragitiai.github.io/my-portfolio"><img src="https://img.shields.io/badge/Portfolio-6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white"/></a>
-</p>
+**Senior AI (GenAI) Engineer & Architect**
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/mohamed-ali-b37953123/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-6C63FF?style=flat&logo=google-chrome)](https://mohamedalifaragitiai.github.io/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat&logo=gmail)](mailto:mohamedalifarag.ml@gmail.com)
+[![Published](https://img.shields.io/badge/Elsevier-Published_Researcher-FF6C00?style=flat&logo=elsevier)](https://doi.org/10.1016/j.fraope.2026.100497)
 
-### About Me
-
-Senior AI Engineer & Architect with **7+ years** of experience building production-grade **Generative AI**, **Multi-Agent Systems**, **MLOps pipelines**, and **enterprise-scale AI architectures**. Passionate about pushing the boundaries of what's possible with intelligent systems.
-
-- Currently architecting **Multi-Agent GenAI Operations Platforms** at Norconsult Telematics
-- Expert in **RAG systems**, **LLM orchestration**, and **agentic workflows**
-- M.Sc. in Computing & Artificial Intelligence from Fayoum University
-- Published researcher in Deep Learning & Video Captioning (Elsevier)
-- Award-winning engineer: **1st Place** graduation projects & pre-master class
+</div>
 
 ---
 
-### Tech Stack
+## Executive Summary
+
+Senior AI Engineer & Architect with **7+ years** delivering **production-grade AI systems** across logistics, fintech, healthcare, and enterprise automation. Proven track record architecting **multi-agent platforms**, **GenAI solutions**, and **MLOps pipelines** that drive measurable business outcomes.
+
+Currently leading AI architecture at **Norconsult Telematics**, building intelligent automation systems processing **10,000+ daily transactions** with **96%+ accuracy**.
+
+<table>
+<tr>
+<td align="center"><strong>7+</strong><br/>Years Experience</td>
+<td align="center"><strong>20+</strong><br/>Production AI Systems</td>
+<td align="center"><strong>5</strong><br/>Companies</td>
+<td align="center"><strong>1</strong><br/>Published Paper</td>
+</tr>
+</table>
+
+---
+
+## Featured Projects
+
+### AI-Powered Offline Asset Intelligence Platform `2026`
+> Enterprise document intelligence for data-center engineering drawings
+
+Architected an **offline AI platform** that extracts, validates, and reconciles equipment tags from engineering drawings (PDF, DWG/DXF, scanned documents) against asset registers. Features **entity resolution** (Fellegi-Sunter, CRF, Loopy Belief Propagation), **predictive ML** with active learning, and **explainable AI** decisions. Deploys as a single CPU-only executable with **zero cloud dependency**.
+
+`Entity Resolution` `Intelligent Document Processing` `Predictive Analytics` `Active Learning` `Explainable AI`
+
+---
+
+### AI Voice-First Interview Platform `2025-2026`
+> Production-grade automated candidate screening system
+
+End-to-end **GenAI interview platform** with LangGraph-based conversational agents, real-time STT/TTS (Faster Whisper + Coqui XTTS), **multi-LLM scoring** (GPT-4o + Ollama), and computer vision behavioral analysis. Delivered **50+ REST/WebSocket APIs**, sub-**3-second** turn latency, reducing recruiter workload by **70%**.
+
+`LangGraph` `GPT-4o` `Whisper` `MediaPipe` `Real-time AI`
+
+---
+
+### AI Truck Safety Inspection System `2025-2026`
+> Automated checkpoint verification with computer vision
+
+Built driver verification pipeline achieving **96.7% face detection accuracy at 56ms** (CPU), bilingual license OCR (Arabic/English), and license-to-face cross-verification. Benchmarked **6 face detection** and **4 OCR models** with interactive analytics dashboards.
+
+`InsightFace` `PaddleOCR` `Computer Vision` `FastAPI` `Docker`
+
+---
+
+### Multi-Agent GenAI Operations Platform `2025-2026`
+> Centralized AI platform serving 5+ departments
+
+Designed microservices **"Sidecar Gateway"** architecture integrating **4 AI modules** (chatbot, anomaly detection, logistics prediction, document processing). Reduced cross-team tool fragmentation by **80%** with centralized AI governance.
+
+`LangChain` `RAG` `Chain-of-Thought` `Microservices` `Docker`
+
+---
+
+## Core Expertise
+
+<table>
+<tr>
+<td width="50%">
 
 **Generative AI & LLMs**
+- Multi-Agent Architectures (LangGraph, CrewAI)
+- RAG / Graph RAG / RAFT Systems
+- LLM Fine-tuning (LoRA, QLoRA, Unsloth)
+- Prompt Engineering & Chain-of-Thought
+- Voice AI (STT/TTS/Voice Cloning)
 
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![RAG](https://img.shields.io/badge/RAG-6C63FF?style=flat-square)
-![Prompt Engineering](https://img.shields.io/badge/Prompt_Engineering-00D4AA?style=flat-square)
+**Machine Learning**
+- Predictive Analytics & Forecasting
+- Anomaly Detection & Fraud Prevention
+- Computer Vision & Document Intelligence
+- Entity Resolution & Record Linkage
+- Active Learning & Continuous Training
 
-**ML / Deep Learning**
+</td>
+<td width="50%">
+
+**Architecture & Systems**
+- Enterprise AI Platform Design
+- Microservices & Event-Driven Architecture
+- Offline/Air-Gapped AI Deployment
+- Explainable AI (XAI) Systems
+- Human-in-the-Loop Workflows
+
+**MLOps & Infrastructure**
+- Docker / Kubernetes / CI/CD
+- AWS SageMaker / Azure ML / OpenShift AI
+- Model Monitoring & Observability
+- Secure GenAI & RBAC
+- Production ML at Scale
+
+</td>
+</tr>
+</table>
+
+---
+
+## Tech Stack
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white)
-
-**Databases & Vector DBs**
-
-![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat-square)
-![Pinecone](https://img.shields.io/badge/Pinecone-000000?style=flat-square)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-
-**MLOps & DevOps**
-
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS_SageMaker-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure_ML-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-
-**Backend & Frontend**
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure_ML-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
 
 ---
 
-### Highlights
+## Credentials
 
-| | |
-|---|---|
-| **7+** Years of AI Experience | **20+** Production AI Projects |
-| **1st Place** - Graduation Projects, Fayoum University | **3rd Place** - IEEE-ICPC Competition |
-| **Published** - Video Captioning using Deep Learning | **M.Sc.** - Computing & AI |
+| Achievement | Details |
+|-------------|---------|
+| **M.Sc. Computing & AI** | Fayoum University - 1st Place, Pre-master Class |
+| **Published Research** | Video Captioning using Deep Learning - Elsevier |
+| **1st Place** | Graduation Projects, Fayoum University 2019 |
+| **3rd Place** | IEEE-ICPC Programming Competition 2018 |
 
 ---
 
-### GitHub Stats
+## GitHub Activity
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=mohamedalifaragitiai&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0a1a&title_color=6c63ff&icon_color=00d4aa&text_color=e0e0e0" alt="GitHub Stats" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohamedalifaragitiai&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a1a&title_color=6c63ff&text_color=e0e0e0" alt="Top Languages" height="170"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mohamedalifaragitiai&theme=tokyonight&hide_border=true&background=0a0a1a&ring=6c63ff&fire=00d4aa&currStreakLabel=6c63ff" alt="GitHub Streak"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=mohamedalifaragitiai&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=3fb950&text_color=c9d1d9" alt="GitHub Stats" height="165"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=mohamedalifaragitiai&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=3fb950&currStreakLabel=58a6ff" alt="GitHub Streak" height="165"/>
 </p>
 
 ---
 
-<p align="center"><i>"Building the future, one intelligent system at a time."</i></p>
+<div align="center">
+
+**Open to impactful AI/GenAI opportunities**
+
+*Architecting intelligent systems that solve real business problems*
+
+</div>
