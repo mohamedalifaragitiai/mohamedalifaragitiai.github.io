@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mohamed Ali &mdash; Senior AI (GenAI) Engineer | AI Architect</title>
+<style>
+    @page {
+        size: A4;
+        margin: 16mm 15mm 14mm 15mm;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Latin Modern Roman", "Georgia", "Times New Roman", serif;
+        font-size: 9.6pt;
+        line-height: 1.34;
+        color: #111;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    a { color: #2952a3; text-decoration: none; }
+
+    /* ---------- Header ---------- */
+    .name {
+        text-align: center;
+        font-size: 22pt;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        margin: 0 0 2px 0;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 12pt;
+        margin: 0 0 6px 0;
+        color: #222;
+    }
+
+    .contact {
+        text-align: center;
+        font-size: 8.6pt;
+        margin-bottom: 2px;
+    }
+
+    .contact span { margin: 0 4px; white-space: nowrap; }
+    .contact .ico { color: #2952a3; font-weight: 700; }
+
+    /* ---------- Sections ---------- */
+    h2.section {
+        font-size: 12pt;
+        font-weight: 700;
+        color: #2952a3;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        margin: 13px 0 3px 0;
+        padding: 0;
+    }
+
+    h2.section + hr {
+        border: none;
+        border-top: 0.9pt solid #444;
+        margin: 0 0 7px 0;
+    }
+
+    p.summary { margin: 0; text-align: justify; }
+
+    /* ---------- Experience ---------- */
+    .job { margin-bottom: 9px; }
+    .job:last-child { margin-bottom: 2px; }
+
+    .job-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+    }
+
+    .job-title { font-weight: 700; font-size: 10pt; }
+    .job-title .co { font-weight: 700; }
+    .job-date { font-size: 9.4pt; white-space: nowrap; }
+
+    .job-sub {
+        font-style: italic;
+        font-size: 9pt;
+        color: #333;
+        margin-top: 1px;
+    }
+
+    .job-focus {
+        font-size: 8.8pt;
+        color: #444;
+        margin-top: 1px;
+    }
+
+    ul {
+        margin: 4px 0 0 0;
+        padding-left: 15px;
+    }
+
+    li { margin-bottom: 2.5px; text-align: justify; }
+
+    /* ---------- Education ---------- */
+    .edu-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .edu-item { margin-bottom: 5px; }
+    .edu-item .deg { font-weight: 700; }
+    .edu-item .school { font-size: 9pt; }
+
+    /* ---------- Projects ---------- */
+    .proj { margin-bottom: 5px; }
+    .proj .ph { font-weight: 700; }
+    .proj p { margin: 0; text-align: justify; }
+
+    .skill-line { margin-bottom: 3px; padding-left: 15px; text-indent: -15px; }
+    .skill-line b { font-weight: 700; }
+
+    .two-col { column-count: 2; column-gap: 22px; }
+
+    .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<div class="name">Mohamed Ali</div>
+<div class="title">Senior AI (GenAI) Engineer | AI Architect</div>
+<div class="contact">
+    <span><span class="ico">&#9993;</span> <a href="mailto:mohamedalifarag.ml@gmail.com">mohamedalifarag.ml@gmail.com</a></span>
+    <span><span class="ico">&#9742;</span> +966 50 598 5860</span>
+    <span><span class="ico">&#9679;</span> Riyadh, Saudi Arabia</span>
+    <span><span class="ico">in</span> <a href="https://www.linkedin.com/in/mohamed-ali-b37953123/">LinkedIn</a></span>
+    <span><span class="ico">&#9679;</span> <a href="https://github.com/mohamedalifaragitiai">GitHub</a></span>
+</div>
+
+<h2 class="section">Summary</h2>
+<hr>
+<p class="summary">
+    Senior AI Engineer and Architect with 7+ years of experience in Generative AI, Multi-Agent Systems, MLOps, and
+    enterprise-scale AI architecture. Proven track record delivering production-grade solutions in logistics automation,
+    fraud detection, predictive analytics, computer vision, and advanced NLP/RAG systems. Expert in designing
+    microservices-based AI platforms with secure deployment pipelines for mission-critical business applications.
+</p>
+
+<h2 class="section">Professional Experience</h2>
+<hr>
+
+<div class="job avoid-break">
+    <div class="job-line">
+        <span class="job-title">Senior AI (GenAI) Engineer | AI Architect, <span class="co">Norconsult Telematics</span></span>
+        <span class="job-date">Oct 2025 &ndash; Present</span>
+    </div>
+    <div class="job-sub">Full-time &middot; Riyadh, Saudi Arabia &middot; On-site</div>
+    <ul>
+        <li>Built an <b>AI-Powered Truck Safety Inspection System</b> for checkpoint gates: face verification (InsightFace
+            SCRFD + ArcFace), bilingual Arabic/English license OCR (PaddleOCR), and license-to-face cross-verification via
+            512-d embeddings &mdash; achieving <b>96.7% detection accuracy at 56 ms/image on CPU</b> and sub-350 ms end-to-end
+            inspection, eliminating manual identity checks entirely.</li>
+        <li>Benchmarked 6 face-detection models across 3,226 WIDER Face images (61 scene categories) and 4 OCR engines;
+            designed a privacy-first architecture storing only non-reversible embeddings.</li>
+        <li>Architected and deployed a centralized <b>Multi-Agent GenAI Operations Platform</b> integrating 4 AI modules
+            (Anomaly Detection, Delay Prediction, OCR, Agentic Chatbot) using a microservices &ldquo;Sidecar Gateway&rdquo;
+            pattern with Nginx, FastAPI, Streamlit, and Docker &mdash; serving 5+ departments.</li>
+        <li>Engineered an <b>Autonomous Agentic Chatbot</b> with RAG capabilities using GPT-4, LangChain, and
+            ChromaDB/Pinecone over structured (SQL/CSV) and unstructured logistics data, reducing manual query time by
+            <b>40%</b> across 200+ daily queries.</li>
+        <li>Developed an <b>Intelligent Anomaly Detection System</b> using ensemble ML (Isolation Forests + statistical
+            heuristics) to flag fraud patterns across 10,000+ daily supply-chain waybills, improving detection rate by
+            <b>35%</b>.</li>
+        <li>Built a <b>Predictive Logistics Delay Engine</b> with XGBoost/LightGBM and 30+ engineered features
+            (route congestion, contractor history, seasonality), reaching <b>87% accuracy</b> and cutting scheduling
+            conflicts by 25%.</li>
+        <li>Implemented an <b>Enterprise Document Intelligence &amp; OCR</b> pipeline (PaddleOCR/Tesseract with GPT-4
+            post-processing and Human-in-the-Loop validation), reducing document processing time by <b>60%</b>.</li>
+        <li>Established secure production infrastructure with zero-trust tunneling (zrok), systemd self-healing
+            orchestration, and RBAC enforcement via cryptographically signed sessions.</li>
+    </ul>
+</div>
+
+<div class="job avoid-break">
+    <div class="job-line">
+        <span class="job-title">Senior Data Scientist | Senior AI Engineer, <span class="co">Confidential</span></span>
+        <span class="job-date">Jul 2024 &ndash; Feb 2026</span>
+    </div>
+    <div class="job-sub">Full-time &middot; Saudi Arabia &middot; Remote</div>
+    <div class="job-focus">Focus: Large Language Models (LLM)</div>
+    <ul>
+        <li>Architected an <b>AI Voice-First Interview Platform</b> automating candidate screening end-to-end: a
+            LangGraph stateful conversation engine, real-time Faster Whisper STT &rarr; LLM correction &rarr; Coqui XTTS v2
+            TTS pipeline, multi-LLM scoring (GPT-4o + Ollama), and CV-based behavioral analysis (MediaPipe, InsightFace).
+            Delivered 50+ REST/WebSocket APIs, 13+ data models, and 127+ unit tests with sub-3 s turn latency.</li>
+        <li>Architected and developed <b>WeBook Brain</b>, an integrated AI system featuring a Gemini 2-powered dual-agent
+            chatbot, a high-performance Fraud Detection RAG application, and a recommendation system &mdash; consolidating
+            3 separate systems into 1 platform and halving support response time.</li>
+        <li>Engineered a scalable FastAPI <b>fraud detection backend</b> using Ollama 3, Mistral, ChromaDB, and MongoDB,
+            containerized with Docker for cross-platform deployment across 100K+ historical transactions.</li>
+        <li>Developed a robust <b>churn prediction model</b> using gradient boosting ensembles and 50+ engineered
+            behavioral features, achieving <b>89% accuracy</b> with 30-day advance warning for retention campaigns.</li>
+    </ul>
+</div>
+
+<div class="job avoid-break">
+    <div class="job-line">
+        <span class="job-title">AI Engineer | Data Scientist, <span class="co">Confidential</span></span>
+        <span class="job-date">Jul 2023 &ndash; Jun 2024</span>
+    </div>
+    <div class="job-sub">Full-time &middot; Egypt &middot; Hybrid</div>
+    <div class="job-focus">Focus: Generative AI</div>
+    <ul>
+        <li>Built and implemented advanced predictive models for sales forecasting, customer segmentation, fraud
+            prevention, and churn prediction to drive strategic business decisions.</li>
+        <li>Optimized product demand predictions by deploying ML and DL models including ARIMA, SARIMA, and Prophet,
+            leading to improved strategic planning.</li>
+        <li>Extracted actionable insights from complex datasets to refine marketing campaigns and enhance overall
+            decision-making processes.</li>
+    </ul>
+</div>
+
+<div class="job avoid-break">
+    <div class="job-line">
+        <span class="job-title">Machine Learning and Operations Engineer, <span class="co">MDS for Computer Systems&nbsp;(MDS&nbsp;CS)</span></span>
+        <span class="job-date">May 2022 &ndash; Jul 2023</span>
+    </div>
+    <div class="job-sub">Full-time &middot; Saudi Arabia &middot; Hybrid</div>
+    <ul>
+        <li>Designed, developed, and deployed scalable AI systems utilizing large-scale, real-world datasets for
+            industrial research and prediction algorithms.</li>
+        <li>Constructed a deep learning model to accurately predict network traffic load for large-scale network devices
+            in a real infrastructure environment and successfully deployed it into production.</li>
+    </ul>
+</div>
+
+<div class="job avoid-break">
+    <div class="job-line">
+        <span class="job-title">Data Scientist | AI Engineer, <span class="co">Linked Gates</span></span>
+        <span class="job-date">May 2019 &ndash; Apr 2021</span>
+    </div>
+    <div class="job-sub">Full-time &middot; Cairo, Egypt &middot; On-site</div>
+    <ul>
+        <li>Constructed intelligent software systems using the Odoo framework, integrated with AI models to deliver
+            predictive insights for client-specific use cases.</li>
+        <li>Developed an image classification system using Convolutional Neural Networks (CNNs) trained on the ImageNet
+            dataset for high-accuracy categorization.</li>
+        <li>Engineered a comprehensive restaurant management platform (VOO) with a mobile application to streamline order
+            management, inventory, and customer engagement.</li>
+    </ul>
+</div>
+
+<h2 class="section">Education</h2>
+<hr>
+<div class="edu-item">
+    <div class="edu-line">
+        <span class="deg">M.Sc., Computing and Artificial Intelligence</span>
+        <span>2022 &ndash; 2025</span>
+    </div>
+    <div class="school">Fayoum University, Egypt</div>
+</div>
+<div class="edu-item">
+    <div class="edu-line">
+        <span class="deg">B.Sc., Computing and Artificial Intelligence</span>
+        <span>2015 &ndash; 2019</span>
+    </div>
+    <div class="school">Fayoum University, Egypt</div>
+</div>
+
+<h2 class="section">Publications</h2>
+<hr>
+<div class="proj">
+    <div class="ph">Video Captioning using Deep Learning with Greedy Search (VCDLGS)</div>
+    <p><a href="https://doi.org/10.1016/j.fraope.2026.100497">https://doi.org/10.1016/j.fraope.2026.100497</a> &mdash; Elsevier</p>
+</div>
+
+<h2 class="section">Key Projects</h2>
+<hr>
+
+<div class="proj avoid-break">
+    <div class="ph">AI-Powered Offline Asset Intelligence Platform (2026) &ndash; Norconsult Telematics</div>
+    <p>Offline AI platform for data-center engineering drawings. Extracts and reconciles equipment tags using entity
+        resolution (Fellegi-Sunter, CRF, Belief Propagation), predictive ML with active learning, and explainable AI.
+        Single CPU-only executable with zero cloud dependency.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">AI Truck Safety Inspection System (2025&ndash;2026) &ndash; Norconsult Telematics</div>
+    <p>Driver verification pipeline with 96.7% face detection accuracy at 56 ms on CPU, bilingual license OCR, and
+        license-to-face cross-verification. Benchmarked 6 detection and 4 OCR models with interactive Plotly analytics.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">AI Voice-First Interview Platform (2025&ndash;2026)</div>
+    <p>Production GenAI platform with LangGraph conversational agents, real-time STT/TTS, multi-LLM scoring
+        (GPT-4o + Ollama), and computer vision behavioral analysis. 50+ APIs, sub-3 s latency, 70% reduction in recruiter
+        workload.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Multi-Agent GenAI Operations Platform (2025&ndash;2026) &ndash; Norconsult Telematics</div>
+    <p>Centralized GenAI platform modernizing enterprise dispatch and logistics operations. Integrated 4 AI modules using
+        a microservices &ldquo;Sidecar Gateway&rdquo; pattern with Nginx, FastAPI, and Streamlit. Chain-of-Thought prompting
+        for complex multi-step logistics queries.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Intelligent Anomaly Detection System (2025&ndash;2026) &ndash; Norconsult Telematics</div>
+    <p>Real-time fraud detection using ensemble ML (Isolation Forests + statistical heuristics). React/Vite SPA frontend
+        with FastAPI backend for interactive &ldquo;Deep Dive&rdquo; dashboards over supply-chain waybills.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Predictive Logistics Delay Engine (2025&ndash;2026) &ndash; Norconsult Telematics</div>
+    <p>XGBoost/LightGBM models for delivery delay forecasting with engineered features (route congestion, contractor
+        history, seasonality). Streamlit dashboard visualizing Delay Severity probabilities with actionable
+        recommendations.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Enterprise Document Intelligence &amp; OCR (2025&ndash;2026) &ndash; Norconsult Telematics</div>
+    <p>Multi-stage OCR pipeline using PaddleOCR with LLM post-processing (GPT-4) for error correction and JSON
+        structuring. Human-in-the-Loop validation UI for low-confidence extractions. Reduced processing time by 60%.</p>
+</div>
+
+<div class="two-col">
+    <div class="proj avoid-break">
+        <div class="ph">Multi-Lingual RAG (2025)</div>
+        <p>RAG system for processing and generating content across multiple languages.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Real-Time Fraud Detection (2025)</div>
+        <p>High-throughput, low-latency system for real-time transaction analysis to prevent financial loss.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Bias Detection in AI Models (2025)</div>
+        <p>Framework to identify and mitigate biases in ML models, ensuring fairness and ethical AI performance.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">WeBook Assistant (2025)</div>
+        <p>Dual-agent AI assistant based on Gemini 2, combining data API and chatbot for seamless support.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Fraud RAG (2025)</div>
+        <p>Fraud detection app using Ollama 3, Mistral, ChromaDB, and MongoDB with a scalable FastAPI backend.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Anxiety Detection (2024)</div>
+        <p>Predictive model detecting early signs of anxiety using physiological and behavioral data.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">ECG Classification (2024)</div>
+        <p>Deep learning model for automated ECG signal classification to identify cardiac arrhythmias.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Mini-RAG (2024)</div>
+        <p>Lightweight RAG application using Mistral LLM and txtai for semantic search.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Brain Tumor Segmentation (2024)</div>
+        <p>YOLOX-based X-ray system for hyper-resolution brain tumor segmentation and classification.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Churn Prediction (2024)</div>
+        <p>ML pipeline using advanced feature engineering to improve customer retention.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Smart Robot (2024)</div>
+        <p>AI model for solar panel cleaning robots, integrating dust sensors for efficiency optimization.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Sales Forecasting (2023)</div>
+        <p>ARIMA, SARIMA, and Prophet models for best-in-class sales prediction.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Fatigue Prediction (2023)</div>
+        <p>Hybrid learning pipeline (CatBoost, XGBoost, LightGBM, deep NN) for fatigue detection.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Network Traffic Load Prediction (2022&ndash;2023)</div>
+        <p>DL model forecasting device load in network infrastructure environments, deployed to production.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Arabic OCR (2022)</div>
+        <p>Arabic text extraction systems using Docker, Flask, and REST API for document digitization.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Video Captioning (2021&ndash;2023)</div>
+        <p>Research using ResNet, VGG, LSTM, and GloVe to generate natural captions for video content.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">Image Classification System (2020)</div>
+        <p>CNN-based system trained on ImageNet for high-accuracy multi-category classification.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">SCADA Innovation (2020)</div>
+        <p>Automated manufacturing software using Odoo and Postgres for high-precision production.</p>
+    </div>
+    <div class="proj avoid-break">
+        <div class="ph">VOO Platform (2019&ndash;2020)</div>
+        <p>Restaurant management platform and mobile app for streamlined order and inventory control.</p>
+    </div>
+</div>
+
+<h2 class="section">Technical Skills</h2>
+<hr>
+<div class="skill-line"><b>Programming:</b> Python, R, C++, Bash Scripting</div>
+<div class="skill-line"><b>Generative AI:</b> LLM Fine-tuning (Qwen 3/Llama/Mistral), Prompt Engineering, Agentic Workflows,
+    RAG, Chain-of-Thought Prompting, LangChain, LangGraph, OpenAI API, Hugging Face Transformers</div>
+<div class="skill-line"><b>ML/DL:</b> TensorFlow, PyTorch, Scikit-Learn, XGBoost, LightGBM, CatBoost, Isolation Forests,
+    Anomaly Detection, Time-Series Forecasting (ARIMA/SARIMA/Prophet), OpenCV, MLflow, NumPy</div>
+<div class="skill-line"><b>Computer Vision &amp; NLP:</b> OCR (Tesseract/PaddleOCR), Document Intelligence, CNN, ResNet,
+    YOLOX, InsightFace, MediaPipe, Natural Language Processing</div>
+<div class="skill-line"><b>Vector Databases:</b> ChromaDB, FAISS, Qdrant, Pinecone</div>
+<div class="skill-line"><b>Big Data:</b> PySpark, Pandas, Dask</div>
+<div class="skill-line"><b>MLOps &amp; DevOps:</b> Docker, Kubernetes, GitHub Actions, AWS SageMaker, Azure ML, CI/CD, DVC,
+    Systemd, Nginx, Reverse Proxy, Microservices Architecture</div>
+<div class="skill-line"><b>Backend &amp; APIs:</b> FastAPI, Flask, REST API, WebSockets, Odoo</div>
+<div class="skill-line"><b>Frontend:</b> React (Vite), Streamlit, Gradio</div>
+<div class="skill-line"><b>Databases:</b> MongoDB, PostgreSQL, SQL, ChromaDB</div>
+<div class="skill-line"><b>BI/Visualization:</b> Power BI, Plotly, Matplotlib, Seaborn, Interactive Dashboards</div>
+<div class="skill-line"><b>AI Security:</b> Responsible AI, Data Governance &amp; Compliance, RBAC, Zero-Trust Networking</div>
+
+<h2 class="section">Soft Skills</h2>
+<hr>
+<ul>
+    <li>Problem Solving &amp; Critical Thinking</li>
+    <li>Technical Leadership &amp; Architecture Design</li>
+    <li>Cross-Functional Team Collaboration</li>
+    <li>Agile/Scrum Methodologies</li>
+    <li>Stakeholder Communication</li>
+</ul>
+
+<h2 class="section">Honors</h2>
+<hr>
+<ul>
+    <li>1st Place, Pre-master Class, Fayoum University (2022)</li>
+    <li>1st Place, Graduation Projects, Fayoum University (2019)</li>
+    <li>3rd Place, IEEE-ICPC Programming Competition (2018)</li>
+</ul>
+
+<h2 class="section">Volunteer Experience</h2>
+<hr>
+<ul>
+    <li>GDG Fayoum</li>
+    <li>IEEE-FSB</li>
+    <li>Life Makers</li>
+</ul>
+
+<h2 class="section">Languages</h2>
+<hr>
+<ul>
+    <li><b>Arabic:</b> Native</li>
+    <li><b>English:</b> Full Professional</li>
+</ul>
+
+</body>
+</html>
