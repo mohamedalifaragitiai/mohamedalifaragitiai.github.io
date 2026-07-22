@@ -80,11 +80,22 @@ strong {
     justify-content: center;
     z-index: 10000;
     transition: opacity 0.6s ease, visibility 0.6s ease;
+    /* Failsafe: the overlay clears itself even if script.js never runs,
+       so a JS error or a stale cached bundle can never blank the page. */
+    animation: preloader-failsafe 0.6s ease 3.5s forwards;
 }
 
 #preloader.loaded {
     opacity: 0;
     visibility: hidden;
+}
+
+@keyframes preloader-failsafe {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .loader {

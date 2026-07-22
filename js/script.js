@@ -17,7 +17,7 @@
         }, 600);
     }
     window.addEventListener('load', function () {
-        setTimeout(hidePreloader, 800);
+        setTimeout(hidePreloader, 400);
     });
     // Fallback: never let the preloader trap the page
     setTimeout(hidePreloader, 3000);
