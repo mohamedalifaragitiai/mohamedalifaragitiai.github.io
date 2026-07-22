@@ -26,6 +26,20 @@ Currently leading AI architecture at **Norconsult Telematics**, building end-to-
 
 ---
 
+## Experience
+
+| Role | Company | Location | Period |
+|:--|:--|:--|:--|
+| **Senior AI (GenAI) Engineer \| AI Architect** | Norconsult Telematics | Riyadh, SA · On-site | Oct 2025 – Present |
+| **Senior Data Scientist \| Senior AI Engineer** ⬆️ | Confidential | Riyadh, SA · Remote | Jul 2024 – Feb 2026 |
+| **AI Engineer \| Data Scientist** | Confidential | Egypt · Hybrid | Jul 2023 – Jun 2024 |
+| **Machine Learning & Operations Engineer** | MDS for Computer Systems | Saudi Arabia · Hybrid | May 2022 – Jul 2023 |
+| **Data Scientist \| AI Engineer** | Linked Gates | Cairo, Egypt · On-site | May 2019 – Apr 2021 |
+
+<sub>⬆️ Promoted from AI Engineer | Data Scientist — 2 yrs 8 mos total tenure</sub>
+
+---
+
 ## Selected Projects
 
 <table>
