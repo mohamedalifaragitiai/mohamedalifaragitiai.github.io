@@ -99,6 +99,35 @@
         margin-top: 1px;
     }
 
+    /* Grouped employer with multiple positions (promotion track) */
+    .co-head { margin-bottom: 2px; }
+    .co-head .co-name { font-weight: 700; font-size: 10pt; }
+    .co-head .co-meta { font-style: italic; font-size: 9pt; color: #333; }
+
+    .role-nested {
+        padding-left: 11px;
+        border-left: 1.1pt solid #b9c4dc;
+        margin-left: 2px;
+        margin-top: 5px;
+    }
+
+    .role-nested .job { margin-bottom: 7px; }
+    .role-nested .job:last-child { margin-bottom: 0; }
+    .role-nested .job-title { font-size: 9.7pt; }
+
+    .promo-tag {
+        font-size: 7.6pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        color: #1f7a5a;
+        border: 0.7pt solid #1f7a5a;
+        border-radius: 8pt;
+        padding: 0 4pt;
+        margin-left: 5px;
+        white-space: nowrap;
+    }
+
     ul {
         margin: 4px 0 0 0;
         padding-left: 15px;
@@ -186,12 +215,22 @@
     </ul>
 </div>
 
+<div class="co-head">
+    <div class="job-line">
+        <span class="co-name">Confidential</span>
+        <span class="job-date">Jul 2023 &ndash; Feb 2026 &middot; 2 yrs 8 mos</span>
+    </div>
+    <div class="co-meta">Full-time &middot; 2 positions &middot; promoted once</div>
+</div>
+
+<div class="role-nested">
+
 <div class="job avoid-break">
     <div class="job-line">
-        <span class="job-title">Senior Data Scientist | Senior AI Engineer, <span class="co">Confidential</span></span>
+        <span class="job-title">Senior Data Scientist | Senior AI Engineer<span class="promo-tag">Promotion</span></span>
         <span class="job-date">Jul 2024 &ndash; Feb 2026</span>
     </div>
-    <div class="job-sub">Full-time &middot; Saudi Arabia &middot; Remote</div>
+    <div class="job-sub">Riyadh, Saudi Arabia &middot; Remote</div>
     <div class="job-focus">Focus: Large Language Models (LLM)</div>
     <ul>
         <li>Architected an <b>AI Voice-First Interview Platform</b> automating candidate screening end-to-end: a
@@ -210,10 +249,10 @@
 
 <div class="job avoid-break">
     <div class="job-line">
-        <span class="job-title">AI Engineer | Data Scientist, <span class="co">Confidential</span></span>
+        <span class="job-title">AI Engineer | Data Scientist</span>
         <span class="job-date">Jul 2023 &ndash; Jun 2024</span>
     </div>
-    <div class="job-sub">Full-time &middot; Egypt &middot; Hybrid</div>
+    <div class="job-sub">Egypt &middot; Hybrid</div>
     <div class="job-focus">Focus: Generative AI</div>
     <ul>
         <li>Built and implemented advanced predictive models for sales forecasting, customer segmentation, fraud
@@ -224,6 +263,8 @@
             decision-making processes.</li>
     </ul>
 </div>
+
+</div><!-- /.role-nested -->
 
 <div class="job avoid-break">
     <div class="job-line">
