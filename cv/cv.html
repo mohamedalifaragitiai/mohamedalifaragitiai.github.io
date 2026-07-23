@@ -154,6 +154,29 @@
     .skill-line { margin-bottom: 3px; padding-left: 15px; text-indent: -15px; }
     .skill-line b { font-weight: 700; }
 
+    .proj-subhead {
+        font-size: 9.4pt;
+        font-weight: 700;
+        color: #2952a3;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        margin: 10px 0 5px;
+        padding-bottom: 2px;
+        border-bottom: 0.6pt solid #cdd6e8;
+    }
+
+    .proj-pub-tag {
+        font-size: 7.4pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        color: #b8860b;
+        border: 0.6pt solid #d4af37;
+        border-radius: 7pt;
+        padding: 0 3.5pt;
+        margin-left: 5px;
+    }
+
     .two-col { column-count: 2; column-gap: 22px; }
 
     .avoid-break { break-inside: avoid; page-break-inside: avoid; }
@@ -323,6 +346,8 @@
 <h2 class="section">Key Projects</h2>
 <hr>
 
+<div class="proj-subhead">Production Systems</div>
+
 <div class="proj avoid-break">
     <div class="ph">AI-Powered Offline Asset Intelligence Platform (2026) &ndash; Norconsult Telematics</div>
     <p>Offline AI platform for data-center engineering drawings. Extracts and reconciles equipment tags using entity
@@ -362,6 +387,24 @@
     <p>Multi-stage OCR pipeline using PaddleOCR with LLM post-processing (GPT-4) for error correction and JSON
         structuring. Human-in-the-Loop validation UI for low-confidence extractions. Reduced processing time by 60%.</p>
 </div>
+<div class="proj avoid-break">
+    <div class="ph">WeBook Assistant (2025)</div>
+    <p>Dual-agent AI assistant based on Gemini 2, combining data API and chatbot for seamless support.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Fraud RAG (2025)</div>
+    <p>Fraud detection app using Ollama 3, Mistral, ChromaDB, and MongoDB with a scalable FastAPI backend.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">Network Traffic Load Prediction (2022&ndash;2023) &ndash; MDS for Computer Systems</div>
+    <p>Deep learning model forecasting device load in network infrastructure environments, deployed to production.</p>
+</div>
+<div class="proj avoid-break">
+    <div class="ph">VOO Platform (2019&ndash;2020) &ndash; Linked Gates</div>
+    <p>Restaurant management platform and mobile app for streamlined order and inventory control.</p>
+</div>
+
+<div class="proj-subhead">Research &amp; Experiments</div>
 
 <div class="two-col">
     <div class="proj avoid-break">
@@ -375,14 +418,6 @@
     <div class="proj avoid-break">
         <div class="ph">Bias Detection in AI Models (2025)</div>
         <p>Framework to identify and mitigate biases in ML models, ensuring fairness and ethical AI performance.</p>
-    </div>
-    <div class="proj avoid-break">
-        <div class="ph">WeBook Assistant (2025)</div>
-        <p>Dual-agent AI assistant based on Gemini 2, combining data API and chatbot for seamless support.</p>
-    </div>
-    <div class="proj avoid-break">
-        <div class="ph">Fraud RAG (2025)</div>
-        <p>Fraud detection app using Ollama 3, Mistral, ChromaDB, and MongoDB with a scalable FastAPI backend.</p>
     </div>
     <div class="proj avoid-break">
         <div class="ph">Anxiety Detection (2024)</div>
@@ -417,15 +452,11 @@
         <p>Hybrid learning pipeline (CatBoost, XGBoost, LightGBM, deep NN) for fatigue detection.</p>
     </div>
     <div class="proj avoid-break">
-        <div class="ph">Network Traffic Load Prediction (2022&ndash;2023)</div>
-        <p>DL model forecasting device load in network infrastructure environments, deployed to production.</p>
-    </div>
-    <div class="proj avoid-break">
         <div class="ph">Arabic OCR (2022)</div>
         <p>Arabic text extraction systems using Docker, Flask, and REST API for document digitization.</p>
     </div>
     <div class="proj avoid-break">
-        <div class="ph">Video Captioning (2021&ndash;2023)</div>
+        <div class="ph">Video Captioning (2021&ndash;2023) <span class="proj-pub-tag">Published</span></div>
         <p>Research using ResNet, VGG, LSTM, and GloVe to generate natural captions for video content.</p>
     </div>
     <div class="proj avoid-break">
@@ -435,10 +466,6 @@
     <div class="proj avoid-break">
         <div class="ph">SCADA Innovation (2020)</div>
         <p>Automated manufacturing software using Odoo and Postgres for high-precision production.</p>
-    </div>
-    <div class="proj avoid-break">
-        <div class="ph">VOO Platform (2019&ndash;2020)</div>
-        <p>Restaurant management platform and mobile app for streamlined order and inventory control.</p>
     </div>
 </div>
 
