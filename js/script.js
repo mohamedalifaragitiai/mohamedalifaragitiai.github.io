@@ -329,6 +329,11 @@
                 card.classList.toggle('hidden', !show);
                 card.classList.toggle('show', show);
             });
+            // Hide a group heading when its cards are all filtered out
+            $$('.project-group').forEach(function (group) {
+                var hasVisible = group.querySelector('.project-card:not(.hidden)');
+                group.classList.toggle('hidden', !hasVisible);
+            });
             measureSections();
         });
     });
