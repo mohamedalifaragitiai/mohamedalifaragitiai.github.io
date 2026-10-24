@@ -1871,6 +1871,41 @@ footer {
     border-radius: 20px;
 }
 
+/* ===== Client logos on project cards (white chip keeps brand colors legible on the dark theme) ===== */
+.client-logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.client-label {
+    font-size: 0.66rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+}
+
+.client-logo {
+    height: 34px;
+    width: auto;
+    max-width: 150px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Source images with built-in whitespace: drop the chip padding so the mark isn't tiny */
+.client-logo--padded {
+    height: 40px;
+    padding: 0 4px;
+}
+
 /* ===== Featured case study card (spans the full project grid) ===== */
 .project-card.featured-case {
     grid-column: 1 / -1;
