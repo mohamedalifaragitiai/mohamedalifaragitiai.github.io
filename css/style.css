@@ -1906,6 +1906,138 @@ footer {
     padding: 0 4px;
 }
 
+/* ===== Domain expertise (About) ===== */
+.domain-section {
+    margin-top: 40px;
+}
+
+.domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    gap: 16px;
+}
+
+.domain-item {
+    padding: 20px;
+}
+
+.domain-item h4 {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.domain-item h4 i {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.domain-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ===== Architecture flow on flagship cards (wraps to a vertical flow on narrow screens) ===== */
+.arch-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+    margin: 0 0 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.arch-step {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    background: rgba(var(--accent-rgb), 0.05);
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.arch-step strong {
+    font-size: 0.76rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.arch-step span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+.arch-arrow {
+    flex: 0 0 14px;
+    align-self: center;
+    height: 0;
+    border-top: 2px solid var(--accent);
+    position: relative;
+}
+
+.arch-arrow::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    top: -6px;
+    border: 5px solid transparent;
+    border-left: 6px solid var(--accent);
+}
+
+@media (max-width: 900px) {
+    .arch-flow {
+        flex-direction: column;
+    }
+
+    .arch-arrow {
+        flex: 0 0 14px;
+        width: 0;
+        height: auto;
+        border-top: none;
+        border-left: 2px solid var(--accent);
+        margin-left: 18px;
+    }
+
+    .arch-arrow::after {
+        right: auto;
+        top: auto;
+        bottom: -2px;
+        left: -6px;
+        border: 5px solid transparent;
+        border-top: 6px solid var(--accent);
+    }
+}
+
+/* ===== Project links (repos, papers) ===== */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-links a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
 /* ===== Featured case study card (spans the full project grid) ===== */
 .project-card.featured-case {
     grid-column: 1 / -1;
@@ -1998,4 +2130,15 @@ footer {
         opacity: 1 !important;
         transform: none !important;
     }
+}
+
+/* ===== Publications: stack multiple cards ===== */
+.publication-card + .publication-card {
+    margin-top: 22px;
+}
+
+.pub-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }

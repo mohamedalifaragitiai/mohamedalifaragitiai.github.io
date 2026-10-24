@@ -151,13 +151,9 @@
 
     // ===== TYPEWRITER EFFECT =====
     var roles = [
+        'AI Solution Architect',
         'Senior GenAI Engineer',
-        'AI Architect',
-        'Multi-Agent Systems Expert',
-        'MLOps Engineer',
-        'RAG & LLM Specialist',
-        'Full-Stack AI Developer',
-        'AI/GenAI & Data Science Lecturer'
+        'Agentic AI & RAG Specialist'
     ];
     var typewriterEl = document.getElementById('typewriter');
     if (typewriterEl) {
