@@ -290,6 +290,12 @@
                         <span class="star-label star-action">Action</span> Developed a face verification pipeline using InsightFace (SCRFD + ArcFace), bilingual license OCR with PaddleOCR, and license-to-face cross-verification via ArcFace 512-d embeddings. Benchmarked 6 face detection models on 3,226 WIDER Face images across 61 scene categories, and 4 OCR engines. Designed a privacy-first architecture storing only non-reversible embeddings. Built concurrent async pipeline (FastAPI + asyncio), interactive Plotly.js benchmark dashboards, and a production-ready web UI with live camera capture.<br>
                         <span class="star-label star-result">Result</span> Achieved <strong>96.7% face detection accuracy at 56ms/image</strong> on CPU, <strong>66.2% field-level OCR accuracy</strong> for bilingual extraction, full inspection completed in under <strong>350ms</strong>, and <strong>100% elimination of manual identity checks</strong> at checkpoint gates. Delivered with Docker deployment and reusable benchmark tooling for CPU/GPU.</li>
 
+                    <li><strong>Offline Asset Extraction &amp; Reconciliation Platform (Data Center)</strong><br>
+                        <span class="star-label star-situation">Situation</span> A major Saudi data-center operator's asset records were scattered across thousands of engineering drawings that disagreed with its Odoo-based operations register. The site allowed no GPU, no cloud, and no data leaving the premises.<br>
+                        <span class="star-label star-task">Task</span> As AI Solution Architect, design an offline, CPU-only, explainable system to extract equipment tags from drawings and reconcile them against the register.<br>
+                        <span class="star-label star-action">Action</span> Built dual-stream extraction (PaddleOCR PP-OCRv5 + OpenVINO for text tags, OpenCV symbol matching for symbol-only assets), with the engine chosen by a 20-model CPU benchmark harness. Designed a deterministic reconciliation engine using tiered composite-key matching, a numeric-signature veto, and an SME approval gate. Added a probabilistic graph layer (Fellegi-Sunter, CRF / loopy belief propagation) for collective entity resolution, and a classical-ML active-learning loop (gradient boosting, Isolation Forest, sequence-gap and n-gram drift models) with an evaluation gate before promotion.<br>
+                        <span class="star-label star-result">Result</span> Delivered a fully offline, auditable platform that reports every asset as Matched, Mismatching, Missing, Novel, or an Anomaly. Every match carries an explanation and a calibrated P(real) confidence score.</li>
+
                     <li><strong>Multi-Agent GenAI Operations Platform</strong><br>
                         <span class="star-label star-situation">Situation</span> Logistics operations across 5+ departments relied on siloed tools with no unified AI capability, causing duplicated effort and inconsistent outputs.<br>
                         <span class="star-label star-task">Task</span> Architect a centralized GenAI platform consolidating multiple AI modules into a single production-grade system.<br>
@@ -473,6 +479,42 @@
     <p class="group-note">Deployed systems with real users and measured business impact.</p>
     <div class="project-grid">
 
+        <div class="project-card glass-card featured-case" data-category="ml cv platform">
+            <div class="project-card-glow"></div>
+            <div class="project-header">
+                <div class="project-icon"><i class="fas fa-cogs"></i></div>
+                <span class="project-year">2026</span>
+            </div>
+            <h3>AI-Powered Offline Asset Extraction &amp; Reconciliation Platform <span class="card-flag">Flagship</span></h3>
+            <p>An offline, CPU-only, explainable AI system built for a major Saudi data-center operator. It extracts equipment tags from engineering drawings (P&amp;IDs, as-built PDFs, DWG/DXF, scans) and reconciles them against an Odoo-based operations register in three phases: deterministic matching, probabilistic graph inference, and self-learning ML. It ships as a single desktop executable with no GPU, no cloud, and no data leaving the site.</p>
+            <div class="case-grid">
+                <div class="case-item">
+                    <h4><span class="case-num">01</span> Asset Tag Extraction from Engineering Drawings</h4>
+                    <p><strong>Problem:</strong> Asset records are scattered across thousands of engineering drawings, and extracting tags by hand is slow and error-prone.</p>
+                    <p><strong>Solution:</strong> Dual-stream extraction. PaddleOCR (PP-OCRv5 + OpenVINO) captures text-labeled tags, while OpenCV template and symbol matching recovers symbol-only assets that OCR can't see. A 20-model CPU benchmark harness chose the production engine based on tag recall, symbol-only recall, and CPU feasibility.</p>
+                    <div class="project-tags"><span>PaddleOCR</span><span>OpenVINO</span><span>OpenCV</span><span>FastAPI</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">02</span> Deterministic, Explainable Reconciliation</h4>
+                    <p><strong>Problem:</strong> The drawings and the system of record disagree. Auditors need defensible answers about what matches, what's missing, and why.</p>
+                    <p><strong>Solution:</strong> A rule-based closed loop. Tiered composite-key matching runs over Tag, ID, Serial, Model, Manufacturer, and Zone, and a numeric-signature veto prevents false matches. A tag family/pattern engine and codified business rules sort every record four ways: Matched, Review, Discovered, or Unmatched. An SME approval gate writes verified corrections back to the register. No LLMs are involved, and every match is explainable.</p>
+                    <div class="project-tags"><span>FastAPI</span><span>Odoo Integration</span><span>SQLite</span><span>Rules Engine</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">03</span> Probabilistic Graph for Collective Entity Resolution</h4>
+                    <p><strong>Problem:</strong> Rules alone can't settle partial tags, conflicting serials, and duplicate records.</p>
+                    <p><strong>Solution:</strong> Each candidate becomes a node and each piece of evidence a weighted edge. Fellegi-Sunter scoring, CRF / loopy belief propagation, and connected-component clustering let confident matches inform uncertain neighbours, and results come out as calibrated P(real) scores. A lightweight SQLite edge table keeps it CPU-friendly and offline.</p>
+                    <div class="project-tags"><span>Fellegi-Sunter</span><span>CRF</span><span>Belief Propagation</span><span>SQLite</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">04</span> Self-Learning Data-Quality Monitoring</h4>
+                    <p><strong>Problem:</strong> Asset registers decay as new naming conventions, missing sequence numbers, and outliers keep appearing.</p>
+                    <p><strong>Solution:</strong> Classical ML only. Gradient-boosted trees score matches, an Isolation Forest flags anomalies, a sequence/gap model predicts missing assets (e.g. gaps in AHU numbering), and character n-gram drift detection catches changing tag conventions. It all runs in an active-learning MLOps loop: SME decisions become training data, training and serving are kept separate, and an evaluation gate must pass before any model is promoted.</p>
+                    <div class="project-tags"><span>scikit-learn</span><span>Gradient Boosting</span><span>Isolation Forest</span><span>Active Learning</span></div>
+                </div>
+            </div>
+        </div>
+
         <div class="project-card glass-card" data-category="genai platform cv">
             <div class="project-card-glow"></div>
             <div class="project-header">
@@ -496,19 +538,6 @@
             <p>End-to-end AI inspection platform for truck checkpoint gates &mdash; automating driver face verification (96.7% accuracy, 56ms), bilingual license OCR (Arabic/English), and license-to-face cross-verification. Benchmarked 6 face detection and 4 OCR models with interactive Plotly.js reports. Privacy-first architecture with Docker deployment.</p>
             <div class="project-tags">
                 <span>InsightFace</span><span>PaddleOCR</span><span>YOLOv8</span><span>FastAPI</span><span>ONNX</span><span>OpenCV</span><span>Plotly.js</span><span>Docker</span>
-            </div>
-        </div>
-
-        <div class="project-card glass-card" data-category="ml platform">
-            <div class="project-card-glow"></div>
-            <div class="project-header">
-                <div class="project-icon"><i class="fas fa-cogs"></i></div>
-                <span class="project-year">2026</span>
-            </div>
-            <h3>AI-Powered Offline Asset Intelligence Platform</h3>
-            <p>Enterprise asset intelligence platform for data-center engineering drawings. Extracts, validates, and reconciles equipment tags against asset registers using intelligent document processing, entity resolution (Fellegi-Sunter, CRF, Loopy Belief Propagation), and predictive ML with active learning. Processes PDF, DWG/DXF, scanned drawings, and legacy Office documents. Deploys as a single CPU-only desktop executable with no cloud dependency &mdash; fully offline, deterministic, explainable, and auditable.</p>
-            <div class="project-tags">
-                <span>PaddleOCR</span><span>PyMuPDF</span><span>ezdxf</span><span>scikit-learn</span><span>FastAPI</span><span>SQLite</span><span>Entity Resolution</span><span>Active Learning</span>
             </div>
         </div>
 

@@ -1871,6 +1871,51 @@ footer {
     border-radius: 20px;
 }
 
+/* ===== Featured case study card (spans the full project grid) ===== */
+.project-card.featured-case {
+    grid-column: 1 / -1;
+    border-color: rgba(var(--accent-rgb), 0.25);
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 16px;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.case-item {
+    padding: 18px;
+    border-radius: var(--radius-sm);
+    background: rgba(var(--primary-rgb), 0.04);
+    border: 1px solid var(--border);
+}
+
+.case-item h4 {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.case-num {
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.project-card .case-item p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.case-item p strong {
+    color: var(--text);
+}
+
 /* ===== Reduced motion: honor OS-level accessibility preference ===== */
 @media (prefers-reduced-motion: reduce) {
     *,
