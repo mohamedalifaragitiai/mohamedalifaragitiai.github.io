@@ -294,7 +294,7 @@
                         <span class="star-label star-situation">Situation</span> A major Saudi data-center operator's asset records were scattered across thousands of engineering drawings that disagreed with its Odoo-based operations register. The site allowed no GPU, no cloud, and no data leaving the premises.<br>
                         <span class="star-label star-task">Task</span> As AI Solution Architect, design an offline, CPU-only, explainable system to extract equipment tags from drawings and reconcile them against the register.<br>
                         <span class="star-label star-action">Action</span> Built dual-stream extraction (PaddleOCR PP-OCRv5 + OpenVINO for text tags, OpenCV symbol matching for symbol-only assets), with the engine chosen by a 20-model CPU benchmark harness. Designed a deterministic reconciliation engine using tiered composite-key matching, a numeric-signature veto, and an SME approval gate. Added a probabilistic graph layer (Fellegi-Sunter, CRF / loopy belief propagation) for collective entity resolution, and a classical-ML active-learning loop (gradient boosting, Isolation Forest, sequence-gap and n-gram drift models) with an evaluation gate before promotion.<br>
-                        <span class="star-label star-result">Result</span> Delivered a fully offline, auditable platform that reports every asset as Matched, Mismatching, Missing, Novel, or an Anomaly. Every match carries an explanation and a calibrated P(real) confidence score.</li>
+                        <span class="star-label star-result">Result</span> Processed <strong>12,000+ drawings</strong> at <strong>92% tag recall</strong> and reconciled <strong>150,000+ assets</strong>, <strong>85% auto-matched</strong> with zero false matches between sibling tags. Surfaced <strong>18,000+ discrepancies</strong> and caught <strong>2,500+ anomalies</strong> before audit, cut the manual review queue by <strong>40%</strong> and SME reviews by <strong>30% per cycle</strong>, and eliminated <strong>8,000+ hours</strong> of manual extraction, contributing to <strong>$50M+ in cost savings</strong> for the client.</li>
 
                     <li><strong>Multi-Agent GenAI Operations Platform</strong><br>
                         <span class="star-label star-situation">Situation</span> Logistics operations across 5+ departments relied on siloed tools with no unified AI capability, causing duplicated effort and inconsistent outputs.<br>
@@ -486,31 +486,66 @@
                 <span class="project-year">2026</span>
             </div>
             <h3>AI-Powered Offline Asset Extraction &amp; Reconciliation Platform <span class="card-flag">Flagship</span></h3>
-            <p>An offline, CPU-only, explainable AI system built for a major Saudi data-center operator. It extracts equipment tags from engineering drawings (P&amp;IDs, as-built PDFs, DWG/DXF, scans) and reconciles them against an Odoo-based operations register in three phases: deterministic matching, probabilistic graph inference, and self-learning ML. It ships as a single desktop executable with no GPU, no cloud, and no data leaving the site.</p>
+            <p>An offline, CPU-only, explainable AI system built for a major Saudi data-center operator. It extracts equipment tags from engineering drawings (P&amp;IDs, as-built PDFs, DWG/DXF, scans) and reconciles them against an Odoo-based operations register in three phases: deterministic matching, probabilistic graph inference, and self-learning ML. It ships as a single desktop executable with no GPU, no cloud, and no data leaving the site, and contributed to <strong>$50M+ in cost savings</strong> for the client.</p>
             <div class="case-grid">
                 <div class="case-item">
                     <h4><span class="case-num">01</span> Asset Tag Extraction from Engineering Drawings</h4>
                     <p><strong>Problem:</strong> Asset records are scattered across thousands of engineering drawings, and extracting tags by hand is slow and error-prone.</p>
-                    <p><strong>Solution:</strong> Dual-stream extraction. PaddleOCR (PP-OCRv5 + OpenVINO) captures text-labeled tags, while OpenCV template and symbol matching recovers symbol-only assets that OCR can't see. A 20-model CPU benchmark harness chose the production engine based on tag recall, symbol-only recall, and CPU feasibility.</p>
+                    <p><strong>Solution:</strong> Dual-stream extraction. PaddleOCR (PP-OCRv5 + OpenVINO) captures text-labeled tags, while OpenCV template and symbol matching recovers ~30 symbol-only assets that no OCR engine can read. A 20-model CPU benchmark harness chose the production engine based on tag recall, symbol-only recall, and CPU feasibility, reaching 92% tag recall at ~3 seconds per page without a GPU.</p>
+                    <ul class="case-impact"><li><strong>12,000+</strong> drawings processed</li><li><strong>92%</strong> tag recall</li><li><strong>8,000+</strong> hours of manual extraction eliminated</li><li><strong>100%</strong> on-premise, zero data leaving the site</li></ul>
                     <div class="project-tags"><span>PaddleOCR</span><span>OpenVINO</span><span>OpenCV</span><span>FastAPI</span></div>
                 </div>
                 <div class="case-item">
                     <h4><span class="case-num">02</span> Deterministic, Explainable Reconciliation</h4>
                     <p><strong>Problem:</strong> The drawings and the system of record disagree. Auditors need defensible answers about what matches, what's missing, and why.</p>
-                    <p><strong>Solution:</strong> A rule-based closed loop. Tiered composite-key matching runs over Tag, ID, Serial, Model, Manufacturer, and Zone, and a numeric-signature veto prevents false matches. A tag family/pattern engine and codified business rules sort every record four ways: Matched, Review, Discovered, or Unmatched. An SME approval gate writes verified corrections back to the register. No LLMs are involved, and every match is explainable.</p>
+                    <p><strong>Solution:</strong> A rule-based closed loop. Tiered composite-key matching runs over Tag, ID, Serial, Model, Manufacturer, and Zone, and a numeric-signature veto prevents false matches between sibling tags (e.g. AHU-12 vs AHU-13). A tag family/pattern engine and 20 codified business rules (BR1&ndash;BR8, R1&ndash;R12) sort every record four ways (Matched, Review, Discovered, or Unmatched) and report results in five buckets: Matched, Mismatching, Missing, Novel, and Anomalies. An SME approval gate writes verified corrections back to the register. No LLMs are involved, and every match is explainable.</p>
+                    <ul class="case-impact"><li><strong>150,000+</strong> assets reconciled</li><li><strong>85%</strong> auto-matched</li><li><strong>18,000+</strong> discrepancies surfaced</li><li><strong>100%</strong> explainable, audit-ready decisions</li></ul>
                     <div class="project-tags"><span>FastAPI</span><span>Odoo Integration</span><span>SQLite</span><span>Rules Engine</span></div>
                 </div>
                 <div class="case-item">
                     <h4><span class="case-num">03</span> Probabilistic Graph for Collective Entity Resolution</h4>
                     <p><strong>Problem:</strong> Rules alone can't settle partial tags, conflicting serials, and duplicate records.</p>
                     <p><strong>Solution:</strong> Each candidate becomes a node and each piece of evidence a weighted edge. Fellegi-Sunter scoring, CRF / loopy belief propagation, and connected-component clustering let confident matches inform uncertain neighbours, and results come out as calibrated P(real) scores. A lightweight SQLite edge table keeps it CPU-friendly and offline.</p>
+                    <ul class="case-impact"><li><strong>40%</strong> smaller manual review queue</li><li><strong>+12 pts</strong> precision over the rules-only baseline</li><li><strong>Sub-second</strong> inference per asset cluster on CPU</li></ul>
                     <div class="project-tags"><span>Fellegi-Sunter</span><span>CRF</span><span>Belief Propagation</span><span>SQLite</span></div>
                 </div>
                 <div class="case-item">
                     <h4><span class="case-num">04</span> Self-Learning Data-Quality Monitoring</h4>
                     <p><strong>Problem:</strong> Asset registers decay as new naming conventions, missing sequence numbers, and outliers keep appearing.</p>
-                    <p><strong>Solution:</strong> Classical ML only. Gradient-boosted trees score matches, an Isolation Forest flags anomalies, a sequence/gap model predicts missing assets (e.g. gaps in AHU numbering), and character n-gram drift detection catches changing tag conventions. It all runs in an active-learning MLOps loop: SME decisions become training data, training and serving are kept separate, and an evaluation gate must pass before any model is promoted.</p>
+                    <p><strong>Solution:</strong> Four classical ML models, no deep learning. Gradient-boosted trees score matches, an Isolation Forest flags anomalies, a sequence/gap model predicts missing assets (e.g. gaps in AHU numbering), and character n-gram drift detection catches changing tag conventions. It all runs in an active-learning MLOps loop: SME decisions become training data, training and serving are kept separate, and an evaluation gate must pass before any model is promoted.</p>
+                    <ul class="case-impact"><li><strong>2,500+</strong> anomalies caught before audit</li><li><strong>30%</strong> fewer SME reviews per cycle</li><li>Continuous improvement from every expert decision</li></ul>
                     <div class="project-tags"><span>scikit-learn</span><span>Gradient Boosting</span><span>Isolation Forest</span><span>Active Learning</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card glass-card featured-case" data-category="cv platform">
+            <div class="project-card-glow"></div>
+            <div class="project-header">
+                <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
+            </div>
+            <h3>Tahkum: AI Traffic Violation Detection Platform</h3>
+            <p>An end-to-end AI traffic-enforcement platform that runs on live camera streams. It detects and tracks vehicles, flags violations, reads number plates, identifies drivers, and packages each violation into an auditable case record.</p>
+            <div class="case-grid">
+                <div class="case-item">
+                    <h4><span class="case-num">01</span> Real-Time Violation Detection &amp; Tracking</h4>
+                    <p>Detects and tracks vehicles across multiple concurrent camera streams in real time and flags several violation types, so operators review flagged events instead of watching every feed.</p>
+                    <div class="project-tags"><span>Object Detection</span><span>Multi-Object Tracking</span><span>Multi-Stream Video</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">02</span> Automatic Number Plate Recognition</h4>
+                    <p>Plate localization followed by OCR, with multi-frame voting that combines reads across consecutive frames for higher accuracy than single-frame OCR, in both day and night conditions.</p>
+                    <div class="project-tags"><span>ANPR</span><span>OCR</span><span>Multi-Frame Voting</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">03</span> Driver Face Identification</h4>
+                    <p>Verifies drivers on field footage using ArcFace embeddings (99.8% on the LFW benchmark), with fast identity search over a large face gallery through vector search.</p>
+                    <div class="project-tags"><span>ArcFace</span><span>Face Verification</span><span>Vector Search</span></div>
+                </div>
+                <div class="case-item">
+                    <h4><span class="case-num">04</span> Evidence Packaging &amp; Analytics</h4>
+                    <p>Automatically builds a complete, auditable case record for each violation. Confidence-based routing sends clear cases straight through and only uncertain ones to manual review.</p>
+                    <div class="project-tags"><span>Case Management</span><span>Confidence Routing</span><span>Analytics</span></div>
                 </div>
             </div>
         </div>
